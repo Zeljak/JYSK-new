@@ -16,6 +16,9 @@
   @mixin for-big-desktop {
     @media (min-width: 1025px) { @content; }
   }
+  @mixin for-hd {
+    @media (min-width: 1367px) { @content; }
+  }
 
 //** VARIABLES **
 
@@ -23,6 +26,7 @@ $fullhd: 1200px + (2 * $gap);
 $section-padding-desktop: 3rem 0;
 
 //colors
+$grey-form: #d6d3d3;
 $grey:#7d847a;
 $dark-grey: #707070;
 $button-grey: #445559;
@@ -38,8 +42,7 @@ $family-secondary: Verdana, sans-serif;
 @font-face {
   font-family: 'NimbusSansBeckerD';
   src:
-       url('/_assets/fonts/nimbus_sans_becker_d-webfont.woff') format('woff'), /* Modern Browsers */
-       url('/_assets/fonts/nimbus_sans_becker_d.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/_assets/fonts/nimbus_sans_becker_d-webfont.woff2') format('woff2'); 
+       url('/_assets/fonts/nimbus_sans_becker_d_1-webfont.woff') format('woff'),
+       url('/_assets/fonts/nimbus_sans_becker_d_1-webfont.woff2') format('woff2'); 
 }
 
