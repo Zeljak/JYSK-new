@@ -66,30 +66,41 @@ section.full {
 
 .logo-main {
   width: 20%;
-  @include for-big-desktop {
-    padding-bottom: 45px;
-  }
-  @include for-desktop {
-    padding-bottom: 45px;
+  
+  @include for-phone {
+    padding-bottom: 15px;
   }
 
   @include for-tablet-landscape {
     padding-bottom: 40px;
   }
 
-  @include for-phone {
-    padding-bottom: 15px;
+  @include for-desktop {
+    padding-bottom: 45px;
+  }
+
+  @include for-big-desktop {
+    padding-bottom: 45px;
   }
 }
 
 h1 {
+  font-size: 70px;
+  line-height: 100px;
+  padding-bottom: 20px;
   color: white;
   text-align: left;
-
-  @include for-hd {
-    font-size: 70px;
-    line-height: 100px;
-    padding-bottom: 20px;
+  
+  @include for-phone {
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+  
+  @include for-tablet-portrait {
+    font-size: 30px;
+    line-height: 50px;
+    padding-bottom: 25px;
   }
 
   @include for-big-desktop {
@@ -97,17 +108,11 @@ h1 {
     line-height: 70px;
     padding-bottom: 30px;
   }
-
-  @include for-tablet-landscape {
-    font-size: 30px;
-    line-height: 50px;
-    padding-bottom: 25px;
-  }
-
-  @include for-phone {
-    font-size: 16px;
-    line-height: 20px;
-    padding-bottom: 10px;
+  
+  @include for-hd {
+    font-size: 70px;
+    line-height: 100px;
+    padding-bottom: 20px;
   }
 }
 
@@ -115,9 +120,14 @@ h1 {
   width: 100vw;
   background-color: #7d847a;
 
-  @include for-big-desktop {
-    height: 19px;
-    margin-top: 20px;
+  @include for-phone {
+    height: 4px;
+    margin-top: 8px;
+  }
+  
+  @include for-tablet-landscape {
+    height: 10px;
+    margin-top: 15px;
   }
 
   @include for-desktop {
@@ -125,15 +135,11 @@ h1 {
     margin-top: 20px;
   }
 
-  @include for-tablet-landscape {
-    height: 10px;
-    margin-top: 15px;
+  @include for-big-desktop {
+    height: 19px;
+    margin-top: 20px;
   }
 
-  @include for-phone {
-    height: 4px;
-    margin-top: 8px;
-  }
 }
 
 p {
@@ -141,14 +147,9 @@ p {
   font-family: $family-secondary;
   color: black;
 
-  @include for-big-desktop {
-    font-size: 25px;
-    line-height: 45px;
-  }
-
-  @include for-desktop {
-    font-size: 24px;
-    line-height: 35px;
+  @include for-phone {
+    font-size: 14px;
+    line-height: 18px;
   }
 
   @include for-tablet-landscape {
@@ -156,10 +157,16 @@ p {
     line-height: 35px;
   }
 
-  @include for-phone {
-    font-size: 14px;
-    line-height: 18px;
+  @include for-desktop {
+    font-size: 24px;
+    line-height: 35px;
   }
+
+  @include for-big-desktop {
+    font-size: 25px;
+    line-height: 45px;
+  }
+
 }
 
 .paragraph-wrapper {
@@ -167,20 +174,20 @@ p {
   justify-content: center;
   width: 68vw;
 
-  @include for-big-desktop {
-    margin: 40px auto 60px auto;
-  }
-
-  @include for-desktop {
-    margin: 20px auto 40px auto;
+  @include for-phone {
+    margin: 10px auto 20px auto;
   }
 
   @include for-tablet-landscape {
     margin: 20px auto 40px auto;
   }
 
-  @include for-phone {
-    margin: 10px auto 20px auto;
+  @include for-desktop {
+    margin: 20px auto 40px auto;
+  }
+
+  @include for-big-desktop {
+    margin: 40px auto 60px auto;
   }
 }
 
@@ -965,6 +972,44 @@ input[type=checkbox i] {
     height: 72px;
     opacity: 0;
   }
+}
+
+// Messages
+#error-msg, #response-msg {
+  color: $jysk-blue;
+  font-family: $family-primary;
+  font-weight: 600;
+  padding-bottom: 40px;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+#response-msg {
+  color: darken($color: $gold, $amount: 20);
+  margin-top: 40px;
 }
 
 //FOOTER
