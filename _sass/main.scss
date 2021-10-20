@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./_utilities";
+
+@import "../node_modules/bulma/bulma";
+
+//GENERAL
+.body {
+  max-width: 100vw;
+  margin: 0;
+}
+
+section.full {
+  max-width: 100vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bg {
+  background: url(../_assets/images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 78vw;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.logo-main {
+  width: 20%;
+  @include for-big-desktop {
+    padding-bottom: 45px;
+  }
+  @include for-desktop {
+    padding-bottom: 45px;
+  }
+
+  @include for-tablet-landscape {
+    padding-bottom: 40px;
+  }
+
+  @include for-phone {
+    padding-bottom: 15px;
+  }
+}
+
+h1 {
+  color: white;
+  text-align: left;
+
+  @include for-big-desktop {
+    font-size: 70px;
+    line-height: 100px;
+    padding-bottom: 20px;
+  }
+
+  @include for-desktop {
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 30px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 50px;
+    padding-bottom: 25px;
+  }
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.divider {
+  width: 100vw;
+  background-color: #7d847a;
+
+  @include for-big-desktop {
+    height: 19px;
+    margin-top: 20px;
+  }
+
+  @include for-desktop {
+    height: 13px;
+    margin-top: 20px;
+  }
+
+  @include for-tablet-landscape {
+    height: 10px;
+    margin-top: 15px;
+  }
+
+  @include for-phone {
+    height: 4px;
+    margin-top: 8px;
+  }
+}
+
+p {
+  text-align: center;
+  font-family: $family-secondary;
+  color: black;
+
+  @include for-big-desktop {
+    font-size: 25px;
+    line-height: 45px;
+  }
+
+  @include for-desktop {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  @include for-phone {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.paragraph-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 68vw;
+
+  @include for-big-desktop {
+    margin: 40px auto 60px auto;
+  }
+
+  @include for-desktop {
+    margin: 20px auto 40px auto;
+  }
+
+  @include for-tablet-landscape {
+    margin: 20px auto 40px auto;
+  }
+
+  @include for-phone {
+    margin: 10px auto 20px auto;
+  }
+}
+
+span {
+  @include for-big-desktop {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @include for-desktop {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include for-phone {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.span-wrapper {
+  @include for-big-desktop {
+    margin-top: -45px;
+  }
+
+  @include for-desktop {
+    margin-top: -30px;
+  }
+
+  @include for-tablet-landscape {
+    margin-top: -30px;
+  }
+
+  @include for-phone {
+    margin-top: -15px;
+  }
+}
+
+h3 {
+  color: $grey;
+  font-family: $family-secondary;
+  @include for-big-desktop {
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  @include for-desktop {
+    font-size: 34px;
+    line-height: 27px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 25px;
+    line-height: 20px;
+  }
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.divider-thin {
+  width: 100vw;
+  background-color: #7d847a;
+
+  @include for-big-desktop {
+    height: 5px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @include for-desktop {
+    height: 3px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include for-tablet-landscape {
+    height: 2px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include for-phone {
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.double-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-grey {
+  display: flex;
+  align-items: center;
+  font-family: $family-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $button-grey;
+  border-radius: 27px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.32);
+  color: white;
+
+  @include for-big-desktop {
+    font-size: 25px;
+    height: 74px;
+    width: 422px;
+    line-height: 1;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    padding-left: 115px;
+  }
+
+  @include for-desktop {
+    font-size: 16px;
+    height: 52px;
+    width: 300px;
+    line-height: 1;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    padding-left: 90px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 16px;
+    height: 50px;
+    width: 225px;
+    line-height: 1;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-left: 55px;
+  }
+
+  @include for-phone {
+    font-size: 14px;
+    height: 40px;
+    width: 225px;
+    line-height: 1;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-left: 60px;
+  }
+}
+
+.button-grey:hover {
+  color: $button-grey;
+  background-color: white;
+  box-shadow: 10px 20px 20px 10px rgba(0, 0, 0, 0.32);
+  border: white;
+}
+
+.wrapper-photos {
+  display: flex;
+  align-content: space-around;
+  width: 100vw;
+}
+
+.image-left {
+  float: left;
+  width: 50vw;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.image-right {
+  float: right;
+  width: 50vw;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+h2 {
+  color: $dark-grey;
+  @include for-big-desktop {
+    font-size: 50px;
+    line-height: 100px;
+  }
+
+  @include for-desktop {
+    font-size: 34px;
+    line-height: 68px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  @include for-phone {
+    font-size: 20px;
+    line-height: 16px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
+  width: 100vw;
+
+  @include for-phone {
+      padding-bottom: 30px;
+  }
+}
+
+//FOOTER
+.footer {
+  background-color: white;
+}
+
+.first-block__text {
+  font-family: "NimbusSansBeckerD";
+}
+
+.container-footer {
+  h4,
+  a {
+    padding: 20px;
+  }
+
+  @include for-tablet-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  @include for-tablet-landscape {
+    font-size: 20px;
+  }
+
+  @include for-phone {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}

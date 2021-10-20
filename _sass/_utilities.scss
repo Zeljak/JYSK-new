@@ -1,0 +1,45 @@
+
+//** MEDIA QUERIES **
+
+@mixin for-phone {
+    @media (max-width: 767px) { @content; }
+  }
+  @mixin for-tablet-portrait {
+    @media (min-width: 768px) { @content; }
+  }
+  @mixin for-tablet-landscape {
+    @media (max-width: 900px) { @content; }
+  }
+  @mixin for-desktop {
+    @media (max-width: 1024px) { @content; }
+  }
+  @mixin for-big-desktop {
+    @media (min-width: 1025px) { @content; }
+  }
+
+//** VARIABLES **
+
+$fullhd: 1200px + (2 * $gap);
+$section-padding-desktop: 3rem 0;
+
+//colors
+$grey:#7d847a;
+$dark-grey: #707070;
+$button-grey: #445559;
+$gold: #c8bcac;
+$brown: #543f2e;
+$jysk-blue: #2175e7;
+
+
+//font-family
+$family-primary: 'Roboto', sans-serif;
+$family-secondary: Verdana, sans-serif;
+
+@font-face {
+  font-family: 'NimbusSansBeckerD';
+  src:
+       url('/_assets/fonts/nimbus_sans_becker_d-webfont.woff') format('woff'), /* Modern Browsers */
+       url('/_assets/fonts/nimbus_sans_becker_d.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/_assets/fonts/nimbus_sans_becker_d-webfont.woff2') format('woff2'); 
+}
+
