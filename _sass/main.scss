@@ -402,6 +402,20 @@ form {
   }
 }
 
+.form {
+  &__inputs-wrapper {
+      max-width: 735px;
+
+      @include for-tablet-landscape {
+          max-width: 70%;
+      }
+
+      @include for-phone {
+          max-width: 80%;
+      }
+  }
+}
+
 //FOOTER
 .footer {
   background-color: white;

@@ -11933,6 +11933,20 @@ form {
   }
 }
 
+.form__inputs-wrapper {
+  max-width: 735px;
+}
+@media (max-width: 900px) {
+  .form__inputs-wrapper {
+    max-width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .form__inputs-wrapper {
+    max-width: 80%;
+  }
+}
+
 .footer {
   background-color: white;
 }
