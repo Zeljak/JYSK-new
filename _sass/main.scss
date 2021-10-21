@@ -567,8 +567,9 @@ form {
             height: 0;
 
             &:checked + .radio__control {
-                background-color: $gold;
-                border: none;
+                background-color: darken($color: $gold, $amount: 50);
+                border: 10px solid $gold;
+                // border: none;
             }
         }
     }
@@ -578,16 +579,18 @@ form {
         border-radius: 50%;
         width: 35px;
         height: 35px;
-        border: 10px solid #adb1b4;
-        background-color: black;
+        // border: 10px solid #adb1b4;
+        border: none;
+        // background-color: black;
+        background-color: $grey-form;
         box-shadow: 0 0px 20px 5px rgb(0 0 0 / 15%);
         transform: translateY(-0.1em);
 
         @include for-tablet-portrait {
           width: 35px;
           height: 35px;
-          border: 10px solid #adb1b4;
-          background-color: black;
+          border: none;
+          background-color: $grey-form;
           box-shadow: 0 0px 20px 5px rgb(0 0 0 / 15%);
           transform: translateY(-0.1em);
         }
@@ -595,8 +598,8 @@ form {
         @include for-phone {
           width: 35px;
           height: 35px;
-          border: 10px solid #adb1b4;
-          background-color: black;
+          border: none;
+          background-color: $grey-form;
           box-shadow: 0 0px 20px 5px rgb(0 0 0 / 15%);
           transform: translateY(-0.1em);
         }
@@ -604,8 +607,8 @@ form {
         @include for-big-desktop {
           width: 35px;
           height: 35px;
-          border: 10px solid #adb1b4;
-          background-color: black;
+          border: none;
+          background-color: $grey-form;
           box-shadow: 0 0px 20px 5px rgb(0 0 0 / 15%);
           transform: translateY(-0.1em);
         }

@@ -12115,16 +12115,16 @@ form {
   height: 0;
 }
 .radio__input input:checked + .radio__control {
-  background-color: #c8bcac;
-  border: none;
+  background-color: #463c2f;
+  border: 10px solid #c8bcac;
 }
 .radio__control {
   display: block;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  border: 10px solid #adb1b4;
-  background-color: black;
+  border: none;
+  background-color: #d6d3d3;
   -webkit-box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-0.1em);
@@ -12134,8 +12134,8 @@ form {
   .radio__control {
     width: 35px;
     height: 35px;
-    border: 10px solid #adb1b4;
-    background-color: black;
+    border: none;
+    background-color: #d6d3d3;
     -webkit-box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
     -webkit-transform: translateY(-0.1em);
@@ -12146,8 +12146,8 @@ form {
   .radio__control {
     width: 35px;
     height: 35px;
-    border: 10px solid #adb1b4;
-    background-color: black;
+    border: none;
+    background-color: #d6d3d3;
     -webkit-box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
     -webkit-transform: translateY(-0.1em);
@@ -12158,8 +12158,8 @@ form {
   .radio__control {
     width: 35px;
     height: 35px;
-    border: 10px solid #adb1b4;
-    background-color: black;
+    border: none;
+    background-color: #d6d3d3;
     -webkit-box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0px 20px 5px rgba(0, 0, 0, 0.15);
     -webkit-transform: translateY(-0.1em);
